@@ -1,27 +1,825 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.70d331e6e66572d62fc5.css">:root{--color-primary:#3eb0ef;--color-base:#15171a;--color-secondary:#5b7a81;--color-border:#c7d5d8;--color-bg:#f5f5f5;--font-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;--font-serif:Georgia,Times,serif;--font-mono:Menlo,Courier,monospace;--font-light:100;--font-normal:400;--font-bold:700;--font-heavy:800;--height:4rem;--margin:2rem;--radius:0.6rem}a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,ul,var,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}img{max-width:100%}html{box-sizing:border-box;font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}*,:after,:before{box-sizing:inherit}a{background-color:transparent}a:active,a:hover{outline:0}b,strong{font-weight:700}dfn,em,i{font-style:italic}h1{margin:.67em 0;font-size:2em}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}mark{background-color:#fdffb6}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{margin:0;color:inherit;font:inherit}button{overflow:visible;border:none}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{cursor:pointer;-webkit-appearance:button}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}input:focus{outline:none}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{box-sizing:content-box;-webkit-appearance:textfield}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}legend{padding:0;border:0}textarea{overflow:auto}table{border-spacing:0;border-collapse:collapse}td,th{padding:0}html{overflow-y:scroll;font-size:62.5%;background:var(--color-base);-webkit-tap-highlight-color:rgba(0,0,0,0)}body,html{overflow-x:hidden}body{color:#3c484e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;font-size:1.5rem;line-height:1.6em;font-weight:400;font-style:normal;letter-spacing:0;text-rendering:optimizeLegibility;background:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-feature-settings:"liga" on}::selection{text-shadow:none;background:#cbeafb}hr{position:relative;display:block;width:100%;margin:1.8em 0 2.4em;padding:0;height:1px;border:0;border-top:1px solid #e3e9ed}audio,canvas,iframe,img,svg,video{vertical-align:middle}fieldset{margin:0;padding:0;border:0}textarea{resize:vertical}blockquote,dl,ol,p,ul{margin:0 0 1.5em}ol,ul{padding-left:1.3em;padding-right:1.5em}ol ol,ol ul,ul ol,ul ul{margin:.5em 0 1em}ul{list-style:disc}ol{list-style:decimal}ol,ul{max-width:100%}li{margin:.5em 0;padding-left:.3em;line-height:1.6em}dt{float:left;margin:0 20px 0 0;width:120px;font-weight:500;text-align:right}dd{margin:0 0 5px;text-align:left}blockquote{margin:.3em 0 1.8em;padding:0 1.6em;border-left:.5em solid #cbeafb}blockquote p{margin:.8em 0;font-size:1.2em;font-weight:300}blockquote small{display:inline-block;margin:.8em 0 .8em 1.5em;font-size:.9em;opacity:.8}blockquote small:before{content:"\2014   \A0"}blockquote cite{font-weight:700}blockquote cite a{font-weight:400}a{color:#26a8ed;text-decoration:none}a:hover{text-decoration:underline}h1,h2,h3,h4,h5,h6{margin-top:0;color:var(--color-base);line-height:1.15;font-weight:700;text-rendering:optimizeLegibility}h1{margin:0 0 .5em;font-size:4rem;font-weight:700}@media (max-width:500px){h1{font-size:2rem}}h2{margin:1.5em 0 .5em;font-size:2rem}@media (max-width:500px){h2{font-size:1.8rem}}h3{margin:1.5em 0 .5em;font-size:1.8rem;font-weight:500}@media (max-width:500px){h3{font-size:1.7rem}}h4{margin:1.5em 0 .5em;font-size:1.6rem;font-weight:500}h5,h6{margin:1.5em 0 .5em;font-size:1.4rem;font-weight:500}.viewport{display:flex;flex-direction:column;justify-content:space-between;min-height:100vh}.container{max-width:1120px;margin:0 auto;padding:0 4vw}.content{margin:0 auto;font-size:2rem;line-height:1.7em}.content-body{display:flex;flex-direction:column;font-family:var(--font-serif)}.post-full-content{max-width:720px;margin:0 auto;background:#fff}.post-feature-image img{margin:0 0 3vw;width:100%;height:500px;-o-object-fit:cover;object-fit:cover}.content-body h1,.content-body h2,.content-body h3,.content-body h4,.content-body h5,.content-body h6{font-family:var(--font-sans-serif)}.content-body h1{margin:1em 0 .5em;font-size:3.4rem;font-weight:700}@media (max-width:500px){.content-body h1{font-size:2.8rem}}.content-title{margin:0 0 .8em;font-size:5rem}@media (max-width:500px){.content-title{margin:.8em 0;font-size:3.4rem}.content{font-size:1.8rem}}.content-body h2{margin:.8em 0 .4em;font-size:3.2rem;font-weight:700}@media (max-width:500px){.content-body h2{font-size:2.6rem}}.content-body h3{margin:.5em 0 .2em;font-size:2.8rem;font-weight:700}@media (max-width:500px){.content-body h3{font-size:2.2rem}}.content-body h4{margin:.5em 0 .2em;font-size:2.4rem;font-weight:700}@media (max-width:500px){.content-body h4{font-size:2.2rem}}.content-body h5{display:block;margin:.5em 0;padding:1em 0 1.5em;border:0;font-family:Georgia,serif;color:var(--color-primary);font-style:italic;font-size:3.2rem;line-height:1.35em;text-align:center}.content-body h6{margin:.5em 0 .2em;font-size:2rem;font-weight:700}.content-body figure{margin:.4em 0 1.6em;font-size:2.8rem;font-weight:700}.content-body pre{margin:.4em 0 1.8em;font-size:1.6rem;line-height:1.4em;white-space:pre-wrap;padding:20px;border-radius:12px}.content-body pre,.site-head{background:var(--color-base);color:#fff}.site-head{padding-top:20px;padding-bottom:20px;background-position:50%;background-size:cover}.site-nav-item{display:inline-block;padding:5px 10px;color:#fff;opacity:.7}.site-nav-item:hover{text-decoration:none;opacity:1}.site-nav-icon{height:15px;margin:-5px 0 0}.site-logo{height:25px}.site-mast{justify-content:space-between}.site-mast,.site-mast-right{display:flex;align-items:center}.site-mast-right .site-nav-item:last-child{padding-right:0}.site-banner{max-width:80%;margin:0 auto;padding:10vw 0;text-align:center}.site-banner-title{margin:0;padding:0;color:#fff;font-size:4rem;line-height:1.3em}.site-banner-desc{margin:5px 0 0;padding:0;font-size:2.4rem;line-height:1.3em;opacity:.7}.site-nav{display:flex;align-items:center;justify-content:space-between;margin:15px 0 0}.site-nav-left{margin:0 20px 0 -10px}.site-nav-button{display:inline-block;padding:5px 10px;border:1px solid #fff;color:#fff;font-size:1.3rem;line-height:1em;border-radius:var(--radius);opacity:.7}.site-nav-button:hover{text-decoration:none}.site-main{padding:4vw 0}.post-feed{display:grid;justify-content:space-between;grid-gap:30px;grid-template-columns:1fr 1fr 1fr}@media (max-width:980px){.post-feed{grid-template-columns:1fr 1fr}}@media (max-width:680px){.post-feed{grid-template-columns:1fr}}.post-card{color:inherit}.post-card,.post-card:hover{text-decoration:none}.post-card-tags{margin:0 0 5px;font-size:1.4rem;line-height:1.15em;color:var(--color-secondary)}.post-card-title{margin:0 0 10px;padding:0}.post-card-excerpt{font-size:1.6rem;line-height:1.55em}.post-card-image{margin:0 0 10px;width:auto;height:200px;background:var(--color-secondary) no-repeat 50%;background-size:cover}.post-card-footer{justify-content:space-between;margin:10px 0 0;color:var(--color-secondary)}.post-card-footer,.post-card-footer-left{display:flex;align-items:center}.post-card-footer-right{display:flex;flex-direction:column}.post-card-avatar{width:30px;height:30px;margin:0 7px 0 0;border-radius:100%;display:flex;align-items:center;justify-content:center}.post-card-avatar .author-profile-image{display:block;width:100%;background:var(--color-secondary);border-radius:100%;-o-object-fit:cover;object-fit:cover}.post-card-avatar .default-avatar{width:26px}.tag-header{max-width:690px;margin:0 0 4vw}.tag-header h1{margin:0 0 1rem}.tag-header p{margin:0;color:var(--color-secondary);font-size:2.2rem;line-height:1.3em}@media (max-width:500px){.tag-header{border-bottom:1px solid var(--color-bg);padding-bottom:4vw}.tag-header p{font-size:1.7rem}}.author-header{display:flex;justify-content:space-between;margin:0 0 4vw}.author-header h1{margin:0 0 1rem}.author-header p{margin:0;color:var(--color-secondary);font-size:2.2rem;line-height:1.3em}.author-header-image{flex:0 0 auto;margin:0 0 0 4vw;height:120px;width:120px;border-radius:100%;overflow:hidden}.author-header-meta{display:flex;margin:1rem 0 0}.author-header-item{display:block;padding:2px 10px}.author-header-item:first-child{padding-left:0}@media (max-width:500px){.author-header{border-bottom:1px solid var(--color-bg);padding-bottom:4vw}.author-header p{font-size:1.7rem}.author-header-image{height:80px;width:80px}}.pagination{position:relative;display:flex;justify-content:space-between;align-items:center;margin:4vw 0 0}.pagination a{display:inline-block;padding:10px 15px;border:1px solid var(--color-border);color:var(--color-secondary);text-decoration:none;font-size:1.4rem;line-height:1em;border-radius:var(--radius)}.pagination-location{position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;color:var(--color-secondary);font-size:1.3rem}.site-foot{padding:20px 0 40px;color:hsla(0,0%,100%,.7);font-size:1.3rem;background:var(--color-base)}.site-foot-nav{display:flex;align-items:center;justify-content:space-between}.site-foot-nav a{color:hsla(0,0%,100%,.7)}.site-foot-nav a:hover{text-decoration:none;color:#fff}.site-foot-nav-right a{display:inline-block;padding:2px 5px}.site-foot-nav-right a:last-child{padding-right:0}.kg-bookmark-card{width:100%;margin-top:0}.kg-bookmark-container{display:flex;min-height:148px;font-family:var(--font-sans-serif);border-radius:3px}.kg-bookmark-container,.kg-bookmark-container:hover{color:var(--color-base);text-decoration:none;box-shadow:0 2px 5px -1px rgba(0,0,0,.15),0 0 1px rgba(0,0,0,.09)}.kg-bookmark-content{flex-grow:1;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;padding:20px}.kg-bookmark-title{color:color(var(--color-secondary) l(-30%));font-size:1.6rem;line-height:1.5em;font-weight:600;transition:color .2s ease-in-out}.kg-bookmark-container:hover .kg-bookmark-title{color:var(--color-primary)}.kg-bookmark-description{display:-webkit-box;overflow-y:hidden;margin-top:12px;max-height:48px;color:color(var(--color-secondary) l(-10%));font-size:1.5rem;line-height:1.5em;font-weight:400;-webkit-line-clamp:2;-webkit-box-orient:vertical}.kg-bookmark-thumbnail{position:relative;min-width:33%;max-height:100%}.kg-bookmark-thumbnail img{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:0 3px 3px 0;-o-object-fit:cover;object-fit:cover}.kg-bookmark-metadata{display:flex;flex-wrap:wrap;align-items:center;margin-top:14px;color:color(var(--color-secondary) l(-10%));font-size:1.5rem;font-weight:400}.kg-bookmark-icon{margin-right:8px;width:22px;height:22px}.kg-bookmark-author{line-height:1.5em}.kg-bookmark-author:after{content:"\2022";margin:0 6px}.kg-bookmark-publisher{overflow:hidden;max-width:240px;line-height:1.5em;text-overflow:ellipsis;white-space:nowrap}.kg-gallery-container{display:flex;flex-direction:column;max-width:1040px;width:100%}.kg-gallery-row{display:flex;flex-direction:row;justify-content:center}.kg-gallery-image img{display:block;margin:0;width:100%;height:100%}.kg-gallery-row:not(:first-of-type){margin:.75em 0 0}.kg-gallery-image:not(:first-of-type){margin:0 0 0 .75em}.kg-gallery-card+.kg-gallery-card,.kg-gallery-card+.kg-image-card.kg-width-wide,.kg-image-card.kg-width-wide+.kg-gallery-card,.kg-image-card.kg-width-wide+.kg-image-card.kg-width-wide{margin:-2.25em 0 3em}</style><meta name="generator" content="Gatsby 2.25.3"/><link rel="shortcut icon" href="/icons/icon-48x48.png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#15171A"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><link rel="alternate" type="application/rss+xml" href="/rss"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><title data-react-helmet="true">Ghost Gatsby Starter - Ghost &amp; Gatsby</title><link data-react-helmet="true" rel="canonical" href="http://localhost:9000/"/><meta data-react-helmet="true" name="description" content="A starter template to build amazing static websites with Ghost and Gatsby"/><meta data-react-helmet="true" property="og:site_name" content="Ghost &amp; Gatsby"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="Ghost Gatsby Starter - Ghost &amp; Gatsby"/><meta data-react-helmet="true" property="og:description" content="A starter template to build amazing static websites with Ghost and Gatsby"/><meta data-react-helmet="true" property="og:url" content="http://localhost:9000/"/><meta data-react-helmet="true" name="twitter:title" content="Ghost Gatsby Starter - Ghost &amp; Gatsby"/><meta data-react-helmet="true" name="twitter:description" content="A starter template to build amazing static websites with Ghost and Gatsby"/><meta data-react-helmet="true" name="twitter:url" content="http://localhost:9000/"/><meta data-react-helmet="true" name="twitter:site" content="https://twitter.com/tryghost/"/><meta data-react-helmet="true" name="twitter:creator" content="@tryghost"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:image" content="https://static.ghost.org/v1.0.0/images/blog-cover.jpg"/><meta data-react-helmet="true" property="og:image" content="https://static.ghost.org/v1.0.0/images/blog-cover.jpg"/><meta data-react-helmet="true" property="og:image:width" content="1000"/><meta data-react-helmet="true" property="og:image:height" content="523"/><script data-react-helmet="true" type="application/ld+json">{
-    "@context": "https://schema.org/",
-    "@type": "WebSite",
-    "url": "http://localhost:9000/",
-    "image": {
-        "@type": "ImageObject",
-        "url": "https://static.ghost.org/v1.0.0/images/blog-cover.jpg",
-        "width": 1000,
-        "height": 523
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "Ghost & Gatsby",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://static.ghost.org/v1.0.0/images/ghost-logo.svg",
-            "width": 60,
-            "height": 60
-        }
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http://localhost:9000"
-    },
-    "description": "A starter template to build amazing static websites with Ghost and Gatsby"
-}</script><link as="script" rel="preload" href="/webpack-runtime-be6f48f35501054e2ac6.js"/><link as="script" rel="preload" href="/framework-1bcdbcdd30f43763a25c.js"/><link as="script" rel="preload" href="/app-1f12323d012db3f8f8fc.js"/><link as="script" rel="preload" href="/styles-e9d24b1846c7d6eb9685.js"/><link as="script" rel="preload" href="/a4458e2e9a0e936aa8d05af593c8326f40d21974-9814bcf41a05215b013b.js"/><link as="script" rel="preload" href="/1d1ef0f86c8d967c0d3102fef8a906501521cee9-47376be756dd811a690b.js"/><link as="script" rel="preload" href="/component---src-templates-index-js-706c1a4d68a96d2c020d.js"/><link as="fetch" rel="preload" href="/page-data\index\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/176528973.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2358152166.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2561578252.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2731221146.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/4145280475.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="viewport"><div class="viewport-top"><header class="site-head" style="background-image:url(https://static.ghost.org/v1.0.0/images/blog-cover.jpg)"><div class="container"><div class="site-mast"><div class="site-mast-left"><a aria-current="page" class="" href="/"><img class="site-logo" src="https://static.ghost.org/v1.0.0/images/ghost-logo.svg" alt="Ghost &amp; Gatsby"/></a></div><div class="site-mast-right"><a href="https://twitter.com/tryghost" class="site-nav-item" target="_blank" rel="noopener noreferrer"><img class="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter"/></a><a href="https://www.facebook.com/ghost" class="site-nav-item" target="_blank" rel="noopener noreferrer"><img class="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook"/></a><a class="site-nav-item" href="https://feedly.com/i/subscription/feed/http://localhost:9000/rss/" target="_blank" rel="noopener noreferrer"><img class="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed"/></a></div></div><div class="site-banner"><h1 class="site-banner-title">Ghost &amp; Gatsby</h1><p class="site-banner-desc">Thoughts, stories and JAMstack</p></div><nav class="site-nav"><div class="site-nav-left"><a aria-current="page" class="site-nav-item" href="/">Home</a><a class="site-nav-item" href="/tag/getting-started/">Tag</a><a class="site-nav-item" href="/author/ghost/">Author</a><a class="site-nav-item" href="https://help.ghost.org" target="_blank" rel="noopener noreferrer">Help</a></div><div class="site-nav-right"><a class="site-nav-button" href="/about">About</a></div></nav></div></header><main class="site-main"><div class="container"><section class="post-feed"><a class="post-card" href="/about/"><header class="post-card-header"><div class="post-card-image" style="background-image:url(https://gatsby.ghost.io/content/images/2019/01/ghost-headless-feature-image.png)"></div><div class="post-card-tags"> </div><h2 class="post-card-title">About Ghost + Gatsby</h2></header><section class="post-card-excerpt">Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS.  Read more about how it works and how to use this starter theme here!</section><footer class="post-card-footer"><div class="post-card-footer-left"><div class="post-card-avatar"><img class="author-profile-image" src="https://static.ghost.org/v2.0.0/images/ghost.png" alt="Ghost"/></div><span>Ghost</span></div><div class="post-card-footer-right"><div>2 min read</div></div></footer></a><a class="post-card" href="/welcome/"><header class="post-card-header"><div class="post-card-image" style="background-image:url(https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png)"></div><div class="post-card-tags"> <span class="">Getting Started</span></div><h2 class="post-card-title">Welcome to Ghost</h2></header><section class="post-card-excerpt">Welcome, it&#x27;s great to have you here.
-We know that first impressions are important, so we&#x27;ve populated your new site with some initial getting started posts that will help you get familiar with everything in no time.</section><footer class="post-card-footer"><div class="post-card-footer-left"><div class="post-card-avatar"><img class="author-profile-image" src="https://static.ghost.org/v2.0.0/images/ghost.png" alt="Ghost"/></div><span>Ghost</span></div><div class="post-card-footer-right"><div>1 min read</div></div></footer></a><a class="post-card" href="/the-editor/"><header class="post-card-header"><div class="post-card-image" style="background-image:url(https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png)"></div><div class="post-card-tags"> <span class="">Getting Started</span></div><h2 class="post-card-title">Writing posts with Ghost ✍️</h2></header><section class="post-card-excerpt">Discover familiar formatting options in a functional toolbar and the ability to add dynamic content seamlessly.</section><footer class="post-card-footer"><div class="post-card-footer-left"><div class="post-card-avatar"><img class="author-profile-image" src="https://static.ghost.org/v2.0.0/images/ghost.png" alt="Ghost"/></div><span>Ghost</span></div><div class="post-card-footer-right"><div>3 min read</div></div></footer></a><a class="post-card" href="/publishing-options/"><header class="post-card-header"><div class="post-card-image" style="background-image:url(https://static.ghost.org/v3.0.0/images/publishing-options.png)"></div><div class="post-card-tags"> <span class="">Getting Started</span></div><h2 class="post-card-title">Publishing options</h2></header><section class="post-card-excerpt">The Ghost editor post settings menu has everything you need to fully optimise and distribute your content effectively.</section><footer class="post-card-footer"><div class="post-card-footer-left"><div class="post-card-avatar"><img class="author-profile-image" src="https://static.ghost.org/v2.0.0/images/ghost.png" alt="Ghost"/></div><span>Ghost</span></div><div class="post-card-footer-right"><div>2 min read</div></div></footer></a><a class="post-card" href="/admin-settings/"><header class="post-card-header"><div class="post-card-image" style="background-image:url(https://static.ghost.org/v3.0.0/images/admin-settings.png)"></div><div class="post-card-tags"> <span class="">Getting Started</span></div><h2 class="post-card-title">Managing admin settings</h2></header><section class="post-card-excerpt">There are a couple of things to do next while you&#x27;re getting set up: making your site private and inviting your team.</section><footer class="post-card-footer"><div class="post-card-footer-left"><div class="post-card-avatar"><img class="author-profile-image" src="https://static.ghost.org/v2.0.0/images/ghost.png" alt="Ghost"/></div><span>Ghost</span></div><div class="post-card-footer-right"><div>2 min read</div></div></footer></a><a class="post-card" href="/organising-content/"><header class="post-card-header"><div class="post-card-image" style="background-image:url(https://static.ghost.org/v3.0.0/images/organising-your-content.png)"></div><div class="post-card-tags"> <span class="">Getting Started</span></div><h2 class="post-card-title">Organising your content</h2></header><section class="post-card-excerpt">Ghost has a flexible organisational taxonomy called tags and the ability to create custom site structures using dynamic routes.</section><footer class="post-card-footer"><div class="post-card-footer-left"><div class="post-card-avatar"><img class="author-profile-image" src="https://static.ghost.org/v2.0.0/images/ghost.png" alt="Ghost"/></div><span>Ghost</span></div><div class="post-card-footer-right"><div>2 min read</div></div></footer></a><a class="post-card" href="/apps-integrations/"><header class="post-card-header"><div class="post-card-image" style="background-image:url(https://static.ghost.org/v3.0.0/images/app-integrations.png)"></div><div class="post-card-tags"> <span class="">Getting Started</span></div><h2 class="post-card-title">Apps &amp; integrations</h2></header><section class="post-card-excerpt">Work with all your favourite apps and tools or create your own custom integrations using the Ghost API.</section><footer class="post-card-footer"><div class="post-card-footer-left"><div class="post-card-avatar"><img class="author-profile-image" src="https://static.ghost.org/v2.0.0/images/ghost.png" alt="Ghost"/></div><span>Ghost</span></div><div class="post-card-footer-right"><div>2 min read</div></div></footer></a><a class="post-card" href="/themes/"><header class="post-card-header"><div class="post-card-image" style="background-image:url(https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png)"></div><div class="post-card-tags"> <span class="">Getting Started</span></div><h2 class="post-card-title">Creating a custom theme</h2></header><section class="post-card-excerpt">Ghost comes with a beautiful default theme designed for publishers which can easily be adapted for most purposes, or you can build a custom theme to suit your needs.</section><footer class="post-card-footer"><div class="post-card-footer-left"><div class="post-card-avatar"><img class="author-profile-image" src="https://static.ghost.org/v2.0.0/images/ghost.png" alt="Ghost"/></div><span>Ghost</span></div><div class="post-card-footer-right"><div>2 min read</div></div></footer></a></section><nav class="pagination" role="navigation"><div></div><div></div></nav></div></main></div><div class="viewport-bottom"><footer class="site-foot"><div class="site-foot-nav container"><div class="site-foot-nav-left"><a aria-current="page" class="" href="/">Ghost &amp; Gatsby</a> © 2019 — Published with <a class="site-foot-nav-item" href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a></div><div class="site-foot-nav-right"><a aria-current="page" class="site-foot-nav-item" href="/">Home</a><a class="site-foot-nav-item" href="/tag/getting-started/">Tag</a><a class="site-foot-nav-item" href="/author/ghost/">Author</a><a class="site-foot-nav-item" href="https://help.ghost.org" target="_blank" rel="noopener noreferrer">Help</a></div></div></footer></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-5204fa10d5950c3006a4.js"],"app":["/app-1f12323d012db3f8f8fc.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ad6431e4664bcf916d19.js"],"component---src-pages-404-js":["/component---src-pages-404-js-a912a67401f12a000660.js"],"component---src-templates-author-js":["/component---src-templates-author-js-261656556a4db32ca98c.js"],"component---src-templates-index-js":["/component---src-templates-index-js-706c1a4d68a96d2c020d.js"],"component---src-templates-post-js":["/component---src-templates-post-js-9289736cf5e7048bb723.js"],"component---src-templates-tag-js":["/component---src-templates-tag-js-86a9b950531d39d6360a.js"]};/*]]>*/</script><script src="/polyfill-5204fa10d5950c3006a4.js" nomodule=""></script><script src="/component---src-templates-index-js-706c1a4d68a96d2c020d.js" async=""></script><script src="/1d1ef0f86c8d967c0d3102fef8a906501521cee9-47376be756dd811a690b.js" async=""></script><script src="/a4458e2e9a0e936aa8d05af593c8326f40d21974-9814bcf41a05215b013b.js" async=""></script><script src="/styles-e9d24b1846c7d6eb9685.js" async=""></script><script src="/app-1f12323d012db3f8f8fc.js" async=""></script><script src="/framework-1bcdbcdd30f43763a25c.js" async=""></script><script src="/webpack-runtime-be6f48f35501054e2ac6.js" async=""></script></body></html>
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Ceevee - Free Responsive HTML5/CSS3 Template</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Works</a></li>
+            <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
+            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">I'm Jonathan Doe.</h1>
+            <h3>I'm a Manila based <span>graphic designer</span>, <span>illustrator</span> and <span>webdesigner</span> creating awesome and
+            effective visual identities for companies of all sizes around the globe. Let's <a class="smoothscroll" href="#about">start scrolling</a>
+            and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
+            <hr />
+            <ul class="social">
+               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="three columns">
+
+            <img class="profile-pic"  src="images/profilepic.jpg" alt="" />
+
+         </div>
+
+         <div class="nine columns main-col">
+
+            <h2>About Me</h2>
+
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+            </p>
+
+            <div class="row">
+
+               <div class="columns contact-details">
+
+                  <h2>Contact Details</h2>
+                  <p class="address">
+						   <span>Jonathan Doe</span><br>
+						   <span>1600 Amphitheatre Parkway<br>
+						         Mountain View, CA 94043 US
+                     </span><br>
+						   <span>(123)456-7890</span><br>
+                     <span>anyone@website.com</span>
+					   </p>
+
+               </div>
+
+               <div class="columns download">
+                  <p>
+                     <a href="#" class="button"><i class="fa fa-download"></i>Download Resume</a>
+                  </p>
+               </div>
+
+            </div> <!-- end row -->
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+
+      <!-- Education
+      ----------------------------------------------- -->
+      <div class="row education">
+
+         <div class="three columns header-col">
+            <h1><span>Education</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>University of Life</h3>
+                  <p class="info">Master in Graphic Design <span>&bull;</span> <em class="date">April 2007</em></p>
+
+                  <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>School of Cool Designers</h3>
+                  <p class="info">B.A. Degree in Graphic Design <span>&bull;</span> <em class="date">March 2003</em></p>
+
+                  <p>
+                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
+                  ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Education -->
+
+
+      <!-- Work
+      ----------------------------------------------- -->
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h1><span>Work</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Awesome Design Studio</h3>
+                  <p class="info">Senior UX Designer <span>&bull;</span> <em class="date">March 2010 - Present</em></p>
+
+                  <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Super Cool Studio</h3>
+                  <p class="info">UX Designer <span>&bull;</span> <em class="date">March 2007 - February 2010</em></p>
+
+                  <p>
+                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
+                  ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Work -->
+
+
+      <!-- Skills
+      ----------------------------------------------- -->
+      <div class="row skill">
+
+         <div class="three columns header-col">
+            <h1><span>Skills</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt.
+            </p>
+
+				<div class="bars">
+
+				   <ul class="skills">
+					   <li><span class="bar-expand photoshop"></span><em>Photoshop</em></li>
+                  <li><span class="bar-expand illustrator"></span><em>Illustrator</em></li>
+						<li><span class="bar-expand wordpress"></span><em>Wordpress</em></li>
+						<li><span class="bar-expand css"></span><em>CSS</em></li>
+						<li><span class="bar-expand html5"></span><em>HTML5</em></li>
+                  <li><span class="bar-expand jquery"></span><em>jQuery</em></li>
+					</ul>
+
+				</div><!-- end skill-bars -->
+
+			</div> <!-- main-col end -->
+
+      </div> <!-- End skills -->
+
+   </section> <!-- Resume Section End-->
+
+
+   <!-- Portfolio Section
+   ================================================== -->
+   <section id="portfolio">
+
+      <div class="row">
+
+         <div class="twelve columns collapsed">
+
+            <h1>Check Out Some of My Works.</h1>
+
+            <!-- portfolio-wrapper -->
+            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+          	   <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-01" title="">
+                        <img alt="" src="images/portfolio/coffee.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Coffee</h5>
+                              <p>Illustrration</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-02" title="">
+                        <img alt="" src="images/portfolio/console.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Console</h5>
+                              <p>Web Development</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-03" title="">
+                        <img alt="" src="images/portfolio/judah.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Judah</h5>
+                              <p>Webdesign</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-04" title="">
+                        <img alt="" src="images/portfolio/into-the-light.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Into The Light</h5>
+                              <p>Photography</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-05" title="">
+                        <img alt="" src="images/portfolio/farmerboy.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Farmer Boy</h5>
+                              <p>Branding</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-06" title="">
+                        <img alt="" src="images/portfolio/girl.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Girl</h5>
+                              <p>Photography</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-07" title="">
+                        <img alt="" src="images/portfolio/origami.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Origami</h5>
+                              <p>Illustrration</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-08" title="">
+                        <img alt="" src="images/portfolio/retrocam.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Retrocam</h5>
+                              <p>Web Development</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div>  <!-- item end -->
+
+            </div> <!-- portfolio-wrapper end -->
+
+         </div> <!-- twelve columns end -->
+
+
+         <!-- Modal Popup
+	      --------------------------------------------------------------- -->
+
+         <div id="modal-01" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Coffee Cup</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-01 End -->
+
+         <div id="modal-02" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Console</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-02 End -->
+
+         <div id="modal-03" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-judah.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Judah</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-03 End -->
+
+         <div id="modal-04" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-intothelight.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Into the Light</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-04 End -->
+
+         <div id="modal-05" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-farmerboy.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Farmer Boy</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-05 End -->
+
+         <div id="modal-06" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-girl.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Girl</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-06 End -->
+
+         <div id="modal-07" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-origami.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Origami</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Illustration</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-07 End -->
+
+         <div id="modal-08" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-retrocam.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Retrocam</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Webdesign, Photography</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-01 End -->
+
+
+      </div> <!-- row End -->
+
+   </section> <!-- Portfolio Section End-->
+
+
+   <!-- Call-To-Action Section
+   ================================================== -->
+   <section id="call-to-action">
+
+      <div class="row">
+
+         <div class="two columns header-col">
+
+            <h1><span>Get Hosting.</span></h1>
+
+         </div>
+
+         <div class="seven columns">
+
+            <h2><span class="lead">Unde Omnis Iste</span></h2>
+            <p><span class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae. </span></p>
+
+         </div>
+
+         <div class="three columns action">
+
+
+
+         </div>
+
+      </div>
+
+   </section> <!-- Call-To-Action Section End-->
+
+
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+      <div class="text-container">
+
+         <div class="row">
+
+            <div class="two columns header-col">
+
+               <h1><span>Client Testimonials</span></h1>
+
+            </div>
+
+            <div class="ten columns flex-container">
+
+               <div class="flexslider">
+
+                  <ul class="slides">
+
+                     <li>
+                        <blockquote>
+                           <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is
+                           to do what you believe is great work. And the only way to do great work is to love what you do.
+                           If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
+                           </p>
+                           <cite>Steve Jobs</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                     <li>
+                        <blockquote>
+                           <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                           Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                           nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                           </p>
+                           <cite>Mr. Adobe</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                  </ul>
+
+               </div> <!-- div.flexslider ends -->
+
+            </div> <!-- div.flex-container ends -->
+
+         </div> <!-- row ends -->
+
+       </div>  <!-- text-container ends -->
+
+   </section> <!-- Testimonials Section End-->
+
+
+   <!-- Contact Section
+   ================================================== -->
+   <section id="contact">
+
+         <div class="row section-head">
+
+            <div class="two columns header-col">
+
+               <h1><span>Get In Touch.</span></h1>
+
+            </div>
+
+            <div class="ten columns">
+
+                  <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                  eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                  voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                  </p>
+
+            </div>
+
+         </div>
+
+         <div class="row">
+
+            <div class="eight columns">
+
+               <!-- form -->
+               <form action="" method="post" id="contactForm" name="contactForm">
+					<fieldset>
+
+                  <div>
+						   <label for="contactName">Name <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactName" name="contactName">
+                  </div>
+
+                  <div>
+						   <label for="contactEmail">Email <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                  </div>
+
+                  <div>
+						   <label for="contactSubject">Subject</label>
+						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+                  </div>
+
+                  <div>
+                     <label for="contactMessage">Message <span class="required">*</span></label>
+                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                  </div>
+
+                  <div>
+                     <button class="submit">Submit</button>
+                     <span id="image-loader">
+                        <img alt="" src="images/loader.gif">
+                     </span>
+                  </div>
+
+					</fieldset>
+				   </form> <!-- Form End -->
+
+               <!-- contact-warning -->
+               <div id="message-warning"> Error boy</div>
+               <!-- contact-success -->
+				   <div id="message-success">
+                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+				   </div>
+
+            </div>
+
+
+            <aside class="four columns footer-widgets">
+
+               <div class="widget widget_contact">
+
+					   <h4>Address and Phone</h4>
+					   <p class="address">
+						   Jonathan Doe<br>
+						   1600 Amphitheatre Parkway <br>
+						   Mountain View, CA 94043 US<br>
+						   <span>(123) 456-7890</span>
+					   </p>
+
+				   </div>
+
+               <div class="widget widget_tweets">
+
+                  <h4 class="widget-title">Latest Tweets</h4>
+
+                  <ul id="twitter">
+                     <li>
+                        <span>
+                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
+                        <a href="#">http://t.co/CGIrdxIlI3</a>
+                        </span>
+                        <b><a href="#">2 Days Ago</a></b>
+                     </li>
+                     <li>
+                        <span>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                        eaque ipsa quae ab illo inventore veritatis et quasi
+                        <a href="#">http://t.co/CGIrdxIlI3</a>
+                        </span>
+                        <b><a href="#">3 Days Ago</a></b>
+                     </li>
+                  </ul>
+
+		         </div>
+
+            </aside>
+
+      </div>
+
+   </section> <!-- Contact Section End-->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+
+            <ul class="copyright">
+               <li>&copy; Copyright 2014 CeeVee</li>
+               <li>Design by <a href="http://www.styleshout.com/" title="Styleshout" target="_blank">Styleshout</a></li>   
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+
+</body>
+
+</html>
