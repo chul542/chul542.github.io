@@ -780,6 +780,15 @@
   document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
+	grecaptcha.ready(function () {
+      grecaptcha.execute('6LdI02wrAAAAANXPLZZVYZPmDOsZ7E-dL-zux6wY', { action: 'submit' }).then(function (token) {
+        // hidden field로 reCAPTCHA 토큰 추가
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = "g-recaptcha-response";
+        input.value = token;
+        e.target.appendChild(input);
+
     emailjs.sendForm("service_pueup46", "template_20c7etd", this)
       .then(function() {
         alert("Message sent successfully!");
@@ -788,5 +797,6 @@
       });
   });
 </script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdI02wrAAAAANXPLZZVYZPmDOsZ7E-dL-zux6wY"></script>
   </body>
 </html>
