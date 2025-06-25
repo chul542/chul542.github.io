@@ -660,7 +660,7 @@
           <div class="col-md-6 order-md-last d-flex">
 <!-- Contact Form (수정) -->
 <form id="contact-form" class="bg-light p-4 p-md-5 contact-form">
-	<div class="g-recaptcha" data-sitekey="6LdW1mwrAAAAAOnn1K7egUzRmhg8Fjo9Pfj-bWD_"></div>
+	
 	<div class="form-group">
 	  <input type="text" name="user_name" class="form-control" placeholder="Your Name" required />
 	</div>
@@ -674,11 +674,10 @@
 	  <textarea name="message" rows="7" class="form-control" placeholder="Message" required></textarea>
 	</div>
   
-	<!-- ✅ 여기에 g-recaptcha-response hidden input 미리 선언 -->
-	<input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" />
+
   
 	<div class="form-group">
-	  <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" />
+	  <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" /><div class="g-recaptcha" data-sitekey="6LdW1mwrAAAAAOnn1K7egUzRmhg8Fjo9Pfj-bWD_"></div>
 	</div>
   </form>
   
