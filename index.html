@@ -770,33 +770,39 @@
   <script src="js/main.js"></script>
     
 
-  <!-- EmailJS SDK -->
+<!-- reCAPTCHA v3 + EmailJS -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LdW1mwrAAAAAOnn1K7egUzRmhg8Fjo9Pfj-bWD_"></script>
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function() {
-    emailjs.init("eaiS9ULSBNTJ17WBx"); // ✨ EmailJS Dashboard에서 복사한 Public Key
+    emailjs.init("eaiS9ULSBNTJ17WBx"); // EmailJS public key
   })();
 
   document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
+    const form = this;
 
-	grecaptcha.ready(function () {
+    grecaptcha.ready(function () {
       grecaptcha.execute('6LdW1mwrAAAAAOnn1K7egUzRmhg8Fjo9Pfj-bWD_', { action: 'submit' }).then(function (token) {
-        // hidden field로 reCAPTCHA 토큰 추가
+        // reCAPTCHA 토큰을 hidden 필드로 추가
         const input = document.createElement("input");
         input.type = "hidden";
         input.name = "g-recaptcha-response";
         input.value = token;
-        e.target.appendChild(input);
+        form.appendChild(input);
 
-    emailjs.sendForm("service_pueup46", "template_20c7etd", this)
-      .then(function() {
-        alert("Message sent successfully!");
-      }, function(error) {
-        alert("Failed to send message. Please try again.\n" + JSON.stringify(error));
+        // EmailJS에 폼 전송
+        emailjs.sendForm("service_pueup46", "template_20c7etd", form)
+          .then(function() {
+            alert("Message sent successfully!");
+            form.reset(); // 폼 초기화
+          }, function(error) {
+            alert("Failed to send message. Please try again.\n" + JSON.stringify(error));
+          });
       });
+    });
   });
 </script>
-<script src="https://www.google.com/recaptcha/api.js?render=6LdW1mwrAAAAAOnn1K7egUzRmhg8Fjo9Pfj-bWD_"></script>
+
   </body>
 </html>
