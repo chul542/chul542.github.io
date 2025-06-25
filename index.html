@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Mincheol</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -659,6 +660,7 @@
           <div class="col-md-6 order-md-last d-flex">
 <!-- Contact Form (수정) -->
 <form id="contact-form" class="bg-light p-4 p-md-5 contact-form">
+	<div class="g-recaptcha" data-sitekey="6LdW1mwrAAAAAOnn1K7egUzRmhg8Fjo9Pfj-bWD_"></div>
 	<div class="form-group">
 	  <input type="text" name="user_name" class="form-control" placeholder="Your Name" required />
 	</div>
@@ -774,49 +776,30 @@
   
   <script src="js/main.js"></script>
     
-
-<!-- ✅ reCAPTCHA 먼저 -->
-<script src="https://www.google.com/recaptcha/api.js?render=6LdI02wrAAAAANXPLZZVYZPmDOsZ7E-dL-zux6wY"></script>
-
-<!-- ✅ 최신 EmailJS SDK v4 -->
+<!-- ✅ EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<!-- ✅ 이메일 및 reCAPTCHA 처리 -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    console.log("✅ DOM Ready");
-
     emailjs.init({
       publicKey: "eaiS9ULSBNTJ17WBx",
     });
 
     const form = document.getElementById("contact-form");
-    if (!form) {
-      console.error("❌ contact-form not found");
-      return;
-    }
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      grecaptcha.ready(function () {
-        grecaptcha
-          .execute("6LdI02wrAAAAANXPLZZVYZPmDOsZ7E-dL-zux6wY", { action: "submit" })
-          .then(function (token) {
-            document.getElementById("g-recaptcha-response").value = token;
-
-            emailjs
-              .sendForm("service_pueup46", "template_20c7etd", form)
-              .then(function () {
-                alert("✅ Message sent!");
-                form.reset();
-              })
-              .catch(function (err) {
-                console.error("❌ EmailJS error", err);
-                alert("Failed to send: " + JSON.stringify(err));
-              });
-          });
-      });
+      emailjs
+        .sendForm("service_pueup46", "template_20c7etd", form)
+        .then(function () {
+          alert("✅ Message sent!");
+          form.reset();
+        })
+        .catch(function (err) {
+          console.error("❌ EmailJS error", err);
+          alert("Failed to send: " + JSON.stringify(err));
+        });
     });
   });
 </script>
