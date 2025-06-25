@@ -775,35 +775,53 @@
   <script src="js/main.js"></script>
     
 
-<!-- reCAPTCHA v3 + EmailJS -->
+<!-- ✅ reCAPTCHA 먼저 -->
 <script src="https://www.google.com/recaptcha/api.js?render=6LdW1mwrAAAAAOnn1K7egUzRmhg8Fjo9Pfj-bWD_"></script>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<!-- ✅ 최신 EmailJS SDK v4 -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- ✅ 이메일 및 reCAPTCHA 처리 -->
 <script>
-	(function() {
-	  emailjs.init("eaiS9ULSBNTJ17WBx"); // Your EmailJS public key
-	})();
-  
-	document.getElementById("contact-form").addEventListener("submit", function(e) {
-	  e.preventDefault();
-	  const form = this;
-  
-	  grecaptcha.ready(function () {
-		grecaptcha.execute('6LdW1mwrAAAAAOnn1K7egUzRmhg8Fjo9Pfj-bWD_', { action: 'submit' }).then(function (token) {
-		  // ✅ 이미 존재하는 hidden input에 토큰 넣기
-		  document.getElementById("g-recaptcha-response").value = token;
-  
-		  // ✅ 토큰이 들어간 후에 emailjs 실행
-		  emailjs.sendForm("service_pueup46", "template_20c7etd", form)
-			.then(function() {
-			  alert("Message sent successfully!");
-			  form.reset(); // success 후 폼 초기화
-			}, function(error) {
-			  alert("Failed to send message. Please try again.\n" + JSON.stringify(error));
-			});
-		});
-	  });
-	});
-  </script>
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("✅ DOM Ready");
+
+    emailjs.init({
+      publicKey: "eaiS9ULSBNTJ17WBx",
+    });
+
+    const form = document.getElementById("contact-form");
+    if (!form) {
+      console.error("❌ contact-form not found");
+      return;
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("6LdW1mwrAAAAAOnn1K7egUzRmhg8Fjo9Pfj-bWD_", { action: "submit" })
+          .then(function (token) {
+            document.getElementById("g-recaptcha-response").value = token;
+
+            emailjs
+              .sendForm("service_pueup46", "template_20c7etd", form)
+              .then(function () {
+                alert("✅ Message sent!");
+                form.reset();
+              })
+              .catch(function (err) {
+                console.error("❌ EmailJS error", err);
+                alert("Failed to send: " + JSON.stringify(err));
+              });
+          });
+      });
+    });
+  });
+</script>
+
+
 
   </body>
 </html>
