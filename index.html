@@ -2,20 +2,25 @@
 <html lang="en">
 
 <head>
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-	<link rel="icon" type="image/png" href="images/favicon.png" />
-	<!-- 기본 Open Graph 설정 -->
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/png" href="/images/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Open Graph 설정 -->
 	<meta property="og:title" content="Mincheol's World" />
 	<meta property="og:description" content="Discover Mincheol, a space enthusiast and software developer." />
 	<meta property="og:image"
 		content="https://raw.githubusercontent.com/chul542/chul542.github.io/main/images/favicon.png" />
 	<meta property="og:url" content="https://chul542.github.io" />
 	<meta property="og:type" content="website" />
-	<title>Mincheol</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<title>Mincheol</title>
+
+	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<!-- Google reCAPTCHA -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.css">
@@ -34,7 +39,8 @@
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
+	<div id="root"></div>
+	<script type="module" src="/src/main.tsx"></script>
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 		<div class="container">
@@ -131,10 +137,10 @@
 							<!-- 간단 소개 -->
 							<p><strong>A backend developer with practical experience from infrastructure to scalable
 									backend systems.</strong></p>
-							<p>I’ve led the development of key backend modules such as messaging, authentication, drive,
+							<p>I've led the development of key backend modules such as messaging, authentication, drive,
 								and WebSocket push servers. I specialize in REST API design, database modeling (ERD),
 								and performance optimization. Notably, I designed and implemented the backend for the
-								Seoul Metropolitan Office of Education’s cloud platform, serving over 100,000 users.</p>
+								Seoul Metropolitan Office of Education's cloud platform, serving over 100,000 users.</p>
 							<p>I also have strong DevOps skills—building CI/CD pipelines and deploying services in both
 								cloud-native and secure, offline environments. With team leadership experience, I
 								effectively collaborate across roles to deliver reliable, high-quality services.</p>
@@ -157,7 +163,7 @@
 							</p>
 							<!-- 필요시 파일 경로 수정 -->
 							<p><a href="files/MMincheol_Kim_eng.pdf" class="btn btn-primary py-3 px-3"
-									target="_blank">Download&nbsp;English CV</a>&nbsp&nbsp<a href="files/Mincheol_Kim_kor.pdf"
+									target="_blank">Download&nbsp;English CV</a>&nbsp;&nbsp;<a href="files/Mincheol_Kim_kor.pdf"
 									class="btn btn-primary py-3 px-3" target="_blank">Download&nbsp;Korean CV</a></p>
 						</div>
 					</div>
@@ -189,7 +195,7 @@
 					<h3 class="h5">Languages</h3>
 					<ul class="tech-list">
 						<li>Go</li>
-						<li>Java&nbsp;/&nbsp;JavaScript&nbsp;/&nbsp>TypeScript</li>
+						<li>Java&nbsp;/&nbsp;JavaScript&nbsp;/&nbsp;>TypeScript</li>
 						<li>Python</li>
 						<li>C/C++</li>
 						<li>Fortran</li>

@@ -1,0 +1,50 @@
+{
+  "name": "mincheol-portfolio-react",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Mincheol's portfolio website built with React, TypeScript, and Vite",
+  "author": "Mincheol Kim",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.2",
+    "react": "^18.2.0",
+    "react-aos": "^3.0.1",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1"
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "vite",
+    "portfolio",
+    "bootstrap",
+    "responsive"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chul542/portfolio-react"
+  },
+  "homepage": "https://chul542.github.io"
+} 
