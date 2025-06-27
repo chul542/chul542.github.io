@@ -169,6 +169,12 @@
 					sd.removeClass('sleep');
 				}
 			}
+
+			// 메뉴가 열려 있으면 닫기
+			if ($('#ftco-nav').is(':visible')) {
+				$('.js-fh5co-nav-toggle').removeClass('active');
+				$('#ftco-nav').removeClass('show');
+			}
 		});
 	};
 	scrollWindow();
